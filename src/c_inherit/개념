@@ -1,0 +1,87 @@
+< 사용자 입장 >
+
+1- 부모 클래스의 멤버는 그냥 사용
+2- 부모 클래스에 없는 경우 그냥 추가
+3- 부모 클래스에 있지만 변경하려면 : overriding
+
+	*오버라이딩
+		- 부모/자식 간에 동일한 함수들
+		- 인자/ 리턴형이 모두 동일해야함
+
+		
+[ 참고 ]
+
+	int a= 10;
+	double d = 33.6;
+	
+	int b = 33.6;  // 문제 발생) 메모리 부족
+	double d2 = 10;// 메모리 충족
+	
+[ 참고 ]
+Stirng a = "홍길동" ;
+StringBuffer b = new StringBuffer("홍길동") 객체생성
+
+String s = b; 안됨
+String b = (string)a; 안됨
+
+
+[ 참고 ] 
+크기
+private	< default <	protected	<	public
+
+*다형성
+	- 상속관계 + 오버라이딩
+	- 부모변수에 자식객체 지정
+	
+	
+[ 고민거리 ] 다형성
+				-> 오버라이딩 필수
+				=> 오버라이딩을 강제적
+				
+				
+* abstract : 미완성
+	-method : 구현{}없이 선언만 있는 함수
+	-class : 미완선메소드를 가지고 있는 클래스
+	
+	=> 필수적으로 오버라이딩 하도록 하려고 ( 다형성 적용하고자 )
+	
+*final : 변경불가
+	- 변수 : 값변경
+	- 메소드 : 오버라이딩 못함
+	- 클래스 : 부모클래스 될 수 없음
+	
+	Math - cos()/Sin() ......
+	
+	class MyMath extends Math {
+		public void sun() {
+		 	//장난으로 sin이 아닌 더하기 연산
+		 }
+	}	 
+
+	Math m = new MyMath;
+	m.sin();
+
+[ modifier ]
+[1]class A {
+	[2]int A;
+	[3]A() {}
+	[4]void A() {}
+}
+		[1]public,protected, abstract, final, static(innerclass만)
+		[2]public,protected, private, final, static
+		[3]public,protected, private
+		[4]public,protected, private, abstract, final
+		
+		
+*interface : 표준화 
+	interface b {
+		(1)int B;    인터페이스 안에 int는 상수취급
+		(2)void B();
+	}
+		-> 인터페이스 안에  modifier는 자동
+		(1)public static final
+		(2)pubic abstract
+
+
+
+
